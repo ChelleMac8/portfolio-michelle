@@ -1,0 +1,142 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+    /* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 60px;
+    padding: 10px 4%;
+
+    box-sizing: border-box;
+    z-index: 1000;
+
+    border:6px solid #dcd4c6;
+    border-style:double;
+    
+}
+
+/* Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: chocolate;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: rgb(182, 82, 11);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Grupo dos botões */
+.flex-theme-download {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+/* Botão de tema */
+#theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    border: 1px solid #333;
+    border-radius: 10px;
+    background: transparent;
+    color: black;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Botão de CV */
+#download-cv {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: auto;
+    min-height: 40px;
+    padding: 10px 14px;
+
+    border: 2px solid black;
+    border-style: dotted;
+    border-radius: 12px;
+    background-color: wheat;
+    color: rgb(146, 13, 35);
+
+    font-size: 14px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    border-color: rgb(182, 82, 11);
+    color: rgb(182, 82, 11);
+    background-color: #181818;
+}
+
+#download-cv:hover {
+    background-color: rgb(122, 184, 14);
+    transform: translateY(-2px);
+}
+
+/* seccao hero-- onde irei colocar a imagem de fundo e o texto a me apresentar*/
+
+
+    .hero {
+    min-height: 100vh;
+
+    background-image: url("img/casanova-08-trees-7431440.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
