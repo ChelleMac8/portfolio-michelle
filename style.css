@@ -33,21 +33,28 @@ a{
 }
 
 /* logo do name hahaha */
-.logo{
+
+.logo p {
+    margin: 0;
+    font-family: monospace;
     font-size: 30px;
-    color: #ffefff;
-    font-weight: 600;
-  
-}
-
-#surname{
-    color: darkorange;
-}
-
-#dot{
-    color: darkorange;
     font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #f1f5f9;
 }
+
+.logo-symbol {
+    color: #b5ff6b;
+}
+
+#surname {
+    color: #f9a006;
+}
+
+#dot {
+    color: #f9a006;
+}
+
 /* Links */
 .nav-links {
     display: flex;
@@ -210,54 +217,12 @@ a{
 .hero-role h2 {
     font-size: clamp(28px, 3.5vw, 48px);
     font-weight: 800;
-    line-height: 1.2;
+    line-height: 1.6;
     letter-spacing: 1px;
     color: #f5f5f5;
 }
 
-.separator {
-    color: #b5ff6b;
-    margin: 0 5px;
-}
 
-.highlight {
-    color: #b5ff6b;
-    font-weight: 600;
-}
-
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 65px;
-    font-size: 16px;
-}
-
-.skill {
-    display: inline-block;
-    background-color: #0a2f42;
-    color: #f1f5f9;
-
-    border: 1px solid rgba(181, 255, 107, 0.3);
-    border-radius: 10px;
-
-    padding: 18px 14px;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 1px;
-
-    margin: 10px;
-    transition: all 0.3s ease;
-}
-
-
-.skill:hover {
-    background-color: #b5ff6b;
-    color: #0a2f42;
-    border-color: #b5ff6b;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(181, 255, 107, 0.15);
-}
 
 @media (max-width: 768px) {
     .hero-content {
@@ -280,4 +245,128 @@ a{
     .skill {
         margin: 0;
     }
+}
+
+
+.cursor {
+    color: #b5ff6b;
+    font-weight: bold;
+    animation: piscar 0.7s infinite;
+}
+
+@keyframes piscar {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin-top: 35px;
+    max-width: 900px;
+}
+
+.skill {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 15px 14px;
+
+    background-color: rgba(10, 47, 66, 0.75);
+    color: #f1f5f9;
+
+    border: 1px solid rgba(181, 255, 107, 0.3);
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    transition: transform 0.3s ease,
+                background-color 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.skill i {
+    color: #b5ff6b;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+
+.skill:hover {
+    background-color: rgba(181, 255, 107, 0.12);
+    border-color: #b5ff6b;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 16px rgba(181, 255, 107, 0.12);
+}
+
+
+
+@media (max-width: 768px) {
+    .skills {
+        gap: 8px;
+        margin-top: 25px;
+    }
+
+    .skill {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .skill i {
+        font-size: 15px;
+    }
+}
+
+
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top:50px;
+}
+
+.hero-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-projects {
+    background-color: #b5ff6b;
+    color: #0a2f42;
+    border: 1px solid #b5ff6b;
+}
+
+.btn-projects:hover {
+    background-color: #f9a006;
+    border-color: #f9a006;
+    transform: translateY(-3px);
+}
+
+.btn-contact {
+    background-color: transparent;
+    color: #f1f5f9;
+    border: 1px solid rgba(181, 255, 107, 0.5);
+}
+
+.btn-contact:hover {
+    background-color: rgba(181, 255, 107, 0.12);
+    border-color: #b5ff6b;
+    transform: translateY(-3px);
 }
