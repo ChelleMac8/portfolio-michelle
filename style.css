@@ -7,7 +7,7 @@
 
 a{
     text-decoration: none;
-    color: #333;
+    color:white ; 
 }
     /* Navbar */
 .navbar {
@@ -21,21 +21,38 @@ a{
     left: 0;
     width: 100%;
     min-height: 60px;
-    padding: 10px 4%;
+    padding: 15px 4%;
 
     box-sizing: border-box;
     z-index: 1000;
 
-    border:6px solid #dcd4c6;
-    border-style:double;
-    
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  
 }
 
+/* logo do name hahaha */
+.logo{
+    font-size: 30px;
+    color: #ffefff;
+    font-weight: 600;
+  
+}
+
+#surname{
+    color: darkorange;
+}
+
+#dot{
+    color: darkorange;
+    font-weight: 700;
+}
 /* Links */
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 60px;
     list-style: none;
 }
 
@@ -71,6 +88,7 @@ a{
     align-items: center;
     gap: 10px;
     flex-shrink: 0;
+   
 }
 
 /* Botão de tema */
@@ -83,10 +101,10 @@ a{
     height: 40px;
     padding: 0;
 
-    border: 1px solid #333;
-    border-radius: 10px;
+    border: 1px solid white;
+    border-radius:10px;
     background: transparent;
-    color: black;
+    color: white;
 
     cursor: pointer;
     transition: all 0.3s ease;
@@ -106,13 +124,14 @@ a{
     border: 2px solid black;
     border-style: dotted;
     border-radius: 12px;
-    background-color: wheat;
-    color: rgb(146, 13, 35);
+    background-color:#dead3b;
+    color: black;
 
     font-size: 14px;
     white-space: nowrap;
     cursor: pointer;
     transition: all 0.3s ease;
+    letter-spacing: 1px;
 }
 
 #theme-toggle:hover {
@@ -122,21 +141,143 @@ a{
 }
 
 #download-cv:hover {
-    background-color: rgb(122, 184, 14);
+    background-color: rgb(183, 89, 12);
     transform: translateY(-2px);
 }
 
 /* seccao hero-- onde irei colocar a imagem de fundo e o texto a me apresentar*/
 
 
-    .hero {
-    min-height: 100vh;
 
-    background-image: url("img/casanova-08-trees-7431440.jpg");
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    color: #f1f5f9;
+}
+
+/* Imagem desfocada */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    background-image: url("img/yoshitaka2-mountain-8499331.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    filter: blur(5px);
+    z-index: -2;
+}
 
+/* Camada escura independente */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.hero-content {
+    width: min(100% - 48px, 1300px);
+    margin-left: 60px;
+    color: #f1f5f9;
+}
+
+.hero-name {
+    font-size: clamp(42px, 4vw, 64px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.name-coloured {
+    color: #f9a006;
+    font-weight: 800;
+}
+
+.hero-role {
+    margin-top: 30px;
+    max-width: 100%;
+}
+
+.hero-role h2 {
+    font-size: clamp(28px, 3.5vw, 48px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: #f5f5f5;
+}
+
+.separator {
+    color: #b5ff6b;
+    margin: 0 5px;
+}
+
+.highlight {
+    color: #b5ff6b;
+    font-weight: 600;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 65px;
+    font-size: 16px;
+}
+
+.skill {
+    display: inline-block;
+    background-color: #0a2f42;
+    color: #f1f5f9;
+
+    border: 1px solid rgba(181, 255, 107, 0.3);
+    border-radius: 10px;
+
+    padding: 18px 14px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    margin: 10px;
+    transition: all 0.3s ease;
 }
 
 
+.skill:hover {
+    background-color: #b5ff6b;
+    color: #0a2f42;
+    border-color: #b5ff6b;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(181, 255, 107, 0.15);
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        width: auto;
+        margin: 0 24px;
+    }
+
+    .hero-name {
+        letter-spacing: 0;
+    }
+
+    .hero-role h2 {
+        font-size: clamp(25px, 6vw, 36px);
+    }
+
+    .skills {
+        gap: 8px;
+    }
+
+    .skill {
+        margin: 0;
+    }
+}
