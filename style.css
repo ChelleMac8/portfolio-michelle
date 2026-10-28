@@ -193,11 +193,12 @@ select {
 .hero {
     min-height: 100vh;
     padding: 100px 4% 40px;
+    gap: 20px;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 3%;
+    justify-content: center;
+   
 
     background-color: var(--white);
     color: var(--white);
@@ -327,17 +328,17 @@ select {
     align-items: center;
     gap: 8px;
 
-    padding: 8px 12px;
+    padding: 10px 12px;
 
     background-color: var(--black);
     color: var(--white);
 
-    border: 1px solid var(--white);
+    border: 2px solid var(--white);
     border-radius: 6px;
 
     font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0;
+    font-weight: 600;
+    letter-spacing: 0.8px;
 
     transition: background-color 0.3s ease,
                 color 0.3s ease,
@@ -393,7 +394,7 @@ select {
 }
 
 .btn-projects {
-    background-color: rgb(34, 177, 94);
+    background-color: rgb(40, 231, 10);
     color: var(--black);
     border-color: var(--black);
 }
@@ -533,3 +534,83 @@ select {
         padding-inline: 0;
     }
 }
+
+/* menu hamburguer */
+
+
+/* Botão hamburger */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 8px;
+}
+
+/* Telemóveis e tablets */
+
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    /* Ícone hamburger */
+    .menu-toggle {
+        display: block;
+        background: transparent;
+        border: none;
+        color: inherit;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+      .menu-toggle:hover{
+        color: green;
+      
+      }
+
+    /* Menu fechado */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 25px 0;
+        margin: 0;
+        background: green;
+        list-style: none;
+        z-index: 1000;
+    }
+
+    /* Menu aberto */
+    .nav-links.active {
+        display: flex;
+    }
+
+  
+    .nav-links a {
+        display: block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .nav-links a:hover {
+        color:whitesmoke;
+        transform: translateY(5px);
+       
+       
+    }
+}
+
