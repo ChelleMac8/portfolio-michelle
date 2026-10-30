@@ -26,10 +26,6 @@ body {
     line-height: 1.6;
 }
 
-a {
-    text-decoration: none;
-
-}
 
 button,
 input,
@@ -45,8 +41,8 @@ select {
 
 .navbar {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+  
+   
     gap: 24px;
 
     position: fixed;
@@ -55,12 +51,12 @@ select {
 
     width: 100%;
     min-height: 70px;
-    padding: 12px 4%;
+   
 
     background-color: var(--white);
 
 
-    z-index: 1000;
+    z-index: 1;
     font-size: 16px;
     font-weight: 600;
 }
@@ -91,6 +87,7 @@ select {
 
 .nav-links a {
     position: relative;
+    text-decoration: none;
     color: black;
     letter-spacing: 0.5px;
     white-space: nowrap;
@@ -126,7 +123,7 @@ select {
 
 .flex-theme-download {
     display: flex;
-    align-items: center;
+  
     gap: 10px;
     flex-shrink: 0;
 }
@@ -397,6 +394,7 @@ select {
     background-color: rgb(40, 231, 10);
     color: var(--black);
     border-color: var(--black);
+    text-decoration: none;
 }
 
 .btn-projects:hover {
@@ -408,6 +406,7 @@ select {
 .btn-contact {
     background-color: var(--black);
     color: var(--white);
+    text-decoration: none;
     border-color: var(--white);
 }
 
@@ -614,3 +613,107 @@ select {
     }
 }
 
+
+
+/* ============================================= */
+/* SECCAO SOBRE MIMMMMM */
+/* =========================================== */
+
+
+.about{
+    display: flex;
+    background-color: black;
+    color: white;
+
+}
+
+.about-intro {
+    display: flex;
+    width: 40%;
+
+    padding: 40px;
+    margin: 20px;
+    align-items: right;
+
+}
+
+.section-number {
+    display: flex;
+    
+    color: #d06c0d;
+    font-family: monospace;
+    font-size:2rem;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+
+.about-intro h1{
+    font-size: 6rem;
+}
+
+
+.about-description {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 50px;
+
+    color: #c9c9c9;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 2.1;
+
+
+
+    letter-spacing: 0.5px;
+}
+
+
+/* Destaque subtil ao passar o rato */
+.about-description p:hover {
+    color: #eeeeee;
+    transition: color 0.3s ease;
+}
+
+/* Assinatura */
+.about-description cite {
+    display: block;
+    margin-top: 25px;
+
+    color: #d06c0d;
+    font-family: monospace;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 600;
+    text-align: right;
+}
+
+/* Espaçamento em dispositivos móveis */
+@media (max-width: 768px) {
+    .about-description {
+        padding: 20px 15px;
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+}
+
+
+/* seccao para os meus queridos projectos */
+
+.cards{
+    display:grid ;
+     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+    padding: 40px;
+    width: 100%;
+}
+
+.card-project{
+    border: 1px solid black;
+    margin: 20px
+
+}
